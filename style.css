@@ -1,263 +1,528 @@
+/* ========================================
+   INSTAGRAM LOGIN PAGE - EXACT CLONE
+   Desktop & Mobile Responsive
+   ======================================== */
+
+/* Reset & Base */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
 }
 
 body {
-    background-color: #f0f2f5;
-    color: #1c1e21;
-}
-
-.container {
-    padding-top: 72px;
-    padding-bottom: 112px;
-    max-width: 980px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 20px;
-}
-
-.left-column {
-    width: 580px;
-    padding-top: 112px;
-    margin-right: 32px;
-}
-
-.fb-logo {
-    height: 50px;
-    /* Adjusted size */
-    margin-bottom: 10px;
-}
-
-.mobile-logo {
-    display: none;
-    width: 60px;
-    margin-bottom: 20px;
-}
-
-.tagline {
-    font-size: 28px;
-    font-weight: normal;
-    line-height: 32px;
-    width: 500px;
-    padding-bottom: 20px;
-}
-
-.right-column {
-    width: 396px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000000;
+    color: #f5f5f5;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header {
+    background-color: #000000;
+    border-bottom: 1px solid #262626;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 100%;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.login-box {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
-    padding: 20px;
+.instagram-logo {
+    display: flex;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 20px;
+    background-color: #1a1a1a;
+}
+
+.login-container {
     width: 100%;
-    text-align: center;
+    max-width: 350px;
+}
+
+.login-box {
+    width: 100%;
+    padding: 24px 16px;
+}
+
+/* ========================================
+   BACK BUTTON
+   ======================================== */
+.back-btn {
+    background: none;
+    border: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    padding: 8px;
+    margin: 0 0 24px -8px;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.back-btn:hover {
+    opacity: 0.6;
+}
+
+.back-btn:active {
+    opacity: 0.4;
+}
+
+/* ========================================
+   LOGIN TITLE
+   ======================================== */
+.login-title {
+    color: #f5f5f5;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
     margin-bottom: 28px;
 }
 
-.login-box input {
+/* ========================================
+   FORM
+   ======================================== */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+input[type="text"],
+input[type="password"] {
     width: 100%;
-    padding: 14px 16px;
-    margin-bottom: 12px;
-    font-size: 17px;
-    border: 1px solid #dddfe2;
-    border-radius: 6px;
+    padding: 11px 12px;
+    background-color: #121212;
+    border: 1px solid #363636;
+    border-radius: 4px;
+    color: #f5f5f5;
+    font-size: 14px;
+    line-height: 18px;
     outline: none;
+    transition: border-color 0.15s;
 }
 
-.login-box input:focus {
-    border-color: #1877f2;
-    box-shadow: 0 0 0 2px #e7f3ff;
+input::placeholder {
+    color: #737373;
 }
 
+input:focus {
+    border-color: #555555;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
 .login-btn {
     width: 100%;
-    background-color: #1877f2;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 0;
+    background-color: #0095f6;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 16px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     margin-top: 6px;
     transition: background-color 0.2s;
 }
 
 .login-btn:hover {
-    background-color: #166fe5;
+    background-color: #1877f2;
 }
 
+.login-btn:active {
+    background-color: #0064c0;
+}
+
+.login-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* ========================================
+   FORGOT PASSWORD
+   ======================================== */
 .forgot-password {
     display: block;
-    color: #1877f2;
-    font-size: 14px;
-    text-decoration: none;
-    margin-top: 16px;
-    margin-bottom: 20px;
+    color: #f5f5f5;
+    font-size: 13px;
     font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    margin: 18px 0 28px;
+    transition: opacity 0.2s;
 }
 
 .forgot-password:hover {
-    text-decoration: underline;
+    opacity: 0.6;
 }
 
-.divider {
-    border-bottom: 1px solid #dadde1;
-    margin-bottom: 20px;
+/* ========================================
+   SOCIAL LOGIN
+   ======================================== */
+.social-login {
+    margin-bottom: 28px;
 }
 
+.facebook-btn {
+    width: 100%;
+    background: none;
+    border: 1px solid #363636;
+    border-radius: 8px;
+    color: #0866FF;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.facebook-btn:hover {
+    background-color: #1a1a1a;
+}
+
+.facebook-btn:active {
+    background-color: #0a0a0a;
+}
+
+/* ========================================
+   CREATE ACCOUNT
+   ======================================== */
 .create-account-btn {
-    background-color: #42b72a;
-    color: #fff;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 6px;
+    width: 100%;
+    background: none;
+    border: 1px solid #363636;
+    border-radius: 8px;
+    color: #0095f6;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 16px;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .create-account-btn:hover {
-    background-color: #36a420;
+    background-color: #1a1a1a;
 }
 
-.create-page {
-    font-size: 14px;
-    color: #1c1e21;
+.create-account-btn:active {
+    background-color: #0a0a0a;
 }
 
-.create-page a {
-    font-weight: bold;
-    color: #1c1e21;
-    text-decoration: none;
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    background-color: #000000;
+    border-top: 1px solid #262626;
+    margin-top: auto;
 }
 
-.create-page a:hover {
-    text-decoration: underline;
-}
-
-.meta-footer {
-    display: none;
-    /* Hidden on desktop by default */
+.footer-container {
+    max-width: 100%;
+    padding: 24px 20px 32px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    gap: 16px;
 }
 
 .meta-logo {
-    height: 20px;
-    margin-bottom: 10px;
+    color: #737373;
+    margin-bottom: 8px;
 }
 
-.meta-links {
+.meta-logo svg {
+    height: 14px;
+    width: auto;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+}
+
+.footer-links a {
+    color: #737373;
     font-size: 12px;
-    color: #737373;
-}
-
-.meta-links a {
-    color: #737373;
     text-decoration: none;
-    margin: 0 5px;
+    transition: color 0.2s;
 }
 
-/* Footer */
-footer {
-    background-color: #fff;
-    padding-top: 20px;
+.footer-links a:hover {
+    color: #f5f5f5;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.language-selector select {
+    background-color: #000000;
+    color: #737373;
+    border: 1px solid #363636;
+    border-radius: 4px;
+    padding: 6px 24px 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' stroke='%23737373' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+}
+
+.language-selector select:hover {
+    border-color: #555555;
+}
+
+.language-selector select option {
+    background-color: #262626;
+    color: #f5f5f5;
+}
+
+.copyright {
     color: #737373;
     font-size: 12px;
+    text-align: center;
 }
 
-/* ... (Existing footer styles) ... */
-
-/* Responsive Design */
-@media (max-width: 900px) {
-    .container {
-        padding-top: 20px;
-        padding-bottom: 40px;
-        background-color: #fff;
-        /* Mobile often has white bg */
+/* ========================================
+   RESPONSIVE - TABLET (768px and below)
+   ======================================== */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 14px 16px;
     }
 
-    .content-wrapper {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
+    .instagram-logo svg {
+        width: 56px;
+        height: 56px;
     }
 
-    .left-column {
-        display: none;
-        /* Hide text logo and tagline on mobile */
-    }
-
-    .mobile-logo {
-        display: block;
-    }
-
-    .right-column {
-        width: 100%;
-        max-width: 400px;
-        padding: 0 16px;
+    .main {
+        padding: 24px 16px;
     }
 
     .login-box {
-        box-shadow: none;
-        /* Remove shadow on mobile */
-        padding: 0;
-        background-color: transparent;
+        padding: 20px 12px;
     }
 
-    .create-page {
-        display: none;
-        /* Hide create page link on mobile */
+    .login-title {
+        font-size: 17px;
+        margin-bottom: 24px;
     }
 
-    footer {
-        display: none;
-        /* Hide standard footer on mobile */
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px 11px;
+        font-size: 13px;
     }
 
-    .meta-footer {
-        display: flex;
-    }
-
+    .login-btn,
+    .facebook-btn,
     .create-account-btn {
-        background-color: #fff;
-        color: #1877f2;
-        border: 1px solid #1877f2;
-        width: 100%;
-        border-radius: 30px;
-        /* Rounded pill shape */
-    }
-
-    .create-account-btn:hover {
-        background-color: #f0f2f5;
-    }
-
-    .login-btn {
-        border-radius: 30px;
-        /* Rounded pill shape */
+        font-size: 13px;
+        padding: 8px 14px;
     }
 
     .forgot-password {
-        color: #1c1e21;
-        /* Darker text for forgot password in some mobile versions */
-        font-weight: 500;
+        font-size: 12px;
+        margin: 16px 0 24px;
+    }
+
+    .social-login {
+        margin-bottom: 24px;
+    }
+
+    .footer-container {
+        padding: 20px 16px 28px;
+    }
+
+    .footer-links {
+        gap: 6px 14px;
+    }
+
+    .footer-links a {
+        font-size: 11px;
+    }
+
+    .language-selector select,
+    .copyright {
+        font-size: 11px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE (480px and below)
+   ======================================== */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 12px;
+    }
+
+    .instagram-logo svg {
+        width: 52px;
+        height: 52px;
+    }
+
+    .main {
+        padding: 20px 12px;
+    }
+
+    .login-container {
+        max-width: 100%;
+    }
+
+    .login-box {
+        padding: 16px 8px;
+    }
+
+    .back-btn {
+        margin-bottom: 20px;
+    }
+
+    .login-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .login-form {
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 9px 10px;
+        font-size: 13px;
+    }
+
+    .login-btn {
+        margin-top: 4px;
+    }
+
+    .forgot-password {
+        margin: 14px 0 22px;
+    }
+
+    .social-login {
+        margin-bottom: 22px;
+    }
+
+    .footer-container {
+        padding: 18px 12px 24px;
+        gap: 14px;
+    }
+
+    .meta-logo {
+        margin-bottom: 6px;
+    }
+
+    .meta-logo svg {
+        height: 12px;
+    }
+
+    .footer-links {
+        gap: 5px 12px;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+    }
+
+    .footer-bottom {
+        gap: 10px;
+        margin-top: 6px;
+    }
+
+    .language-selector select,
+    .copyright {
+        font-size: 10px;
+    }
+
+    .language-selector select {
+        padding: 5px 22px 5px 9px;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - EXTRA SMALL (360px and below)
+   ======================================== */
+@media (max-width: 360px) {
+    .header-container {
+        padding: 10px;
+    }
+
+    .instagram-logo svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .main {
+        padding: 16px 10px;
+    }
+
+    .login-box {
+        padding: 12px 6px;
+    }
+
+    .footer-links a {
+        font-size: 9px;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+    outline: 2px solid #0095f6;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }
