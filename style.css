@@ -48,6 +48,13 @@ body {
     display: flex;
 }
 
+.instagram-logo svg,
+.instagram-logo img {
+    height: 150px;
+    width: auto;
+    display: block;
+}
+
 /* ========================================
    MAIN CONTENT
    ======================================== */
@@ -332,9 +339,9 @@ input:focus {
         padding: 14px 16px;
     }
 
-    .instagram-logo svg {
-        width: 56px;
-        height: 56px;
+    .instagram-logo svg,
+    .instagram-logo img {
+        height: 84px;
     }
 
     .main {
@@ -398,9 +405,9 @@ input:focus {
         padding: 12px;
     }
 
-    .instagram-logo svg {
-        width: 52px;
-        height: 52px;
+    .instagram-logo svg,
+    .instagram-logo img {
+        height: 120px;
     }
 
     .main {
@@ -491,9 +498,9 @@ input:focus {
         padding: 10px;
     }
 
-    .instagram-logo svg {
-        width: 48px;
-        height: 48px;
+    .instagram-logo svg,
+    .instagram-logo img {
+        height: 36px;
     }
 
     .main {
